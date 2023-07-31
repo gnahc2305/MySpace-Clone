@@ -12,9 +12,9 @@ export default async function Dashboard() {
     redirect('/api/auth/signin');
   }
 
-    // console.log(session?.user);
-  // const currentUserEmail = session?.user?.email!;
-  const currentUserEmail = 'achangmurillo@gmail.com';
+    console.log(session?.user?.email!);
+  const currentUserEmail = session?.user?.email!;
+  // const currentUserEmail = 'achangmurillo@gmail.com';
   const user = await prisma.user.findUnique({
     where: {
       email: currentUserEmail,

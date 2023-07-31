@@ -30,19 +30,19 @@ export function ProfileForm({ user }: any) {
       <h2>Edit Your Profile</h2>
       <form onSubmit={updateUser}>
         <label htmlFor="name">Name</label>
-        <input type="text" name="name" defaultValue={user?.name ?? ""} />
+        <input className='text-black' type="text" name="name" defaultValue={user?.name ?? ""} />
         <label htmlFor="bio">Bio</label>
         <textarea
           name="bio"
-          className='text-black'
           cols={30}
+          className='text-black'
           rows={10}
           defaultValue={user?.bio ?? ""}
         ></textarea>
         <label htmlFor="age">Age</label>
-        <input type="text" name="age" defaultValue={user?.age ?? 0} />
+        <input className='text-black' type="text" name="age" defaultValue={user?.age ?? 0} />
         <label htmlFor="image">Profile Image URL</label>
-        <input type="text" name="image" defaultValue={user?.image ?? ""} />
+        <input className='text-black' type="text" name="image" defaultValue={user?.image ?? ""} />
 
         <button type="submit">Save</button>
       </form>
